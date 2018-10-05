@@ -1,0 +1,45 @@
+
+1. Install Create React app
+
+`npm install -g create-react-app`
+
+2. Create react app
+
+`create-react-app todo-app`
+`cd todo-app`
+
+3. Start React App
+
+`yarn run start`
+
+4. Add Electron to React app
+
+`yarn add electron --dev`
+
+5. Add Electron start command and main script to package.json
+
+"electron-start": "electron ."
+
+"main": "main.js"
+
+6. Start React app and Electron app 
+
+`yarn run start`
+`yarn run electron-start`
+
+
+7. Add Electron builder and wait on and concurrently 
+
+`yarn add electron-builder wait-on concurrently --dev`
+
+
+wait-on -  Command line utils to wait for File descriptors(http, socket, file) to be available 
+
+8. Start electron and react build process
+
+`"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""`
+
+
+9. Add electron env utility
+
+`yarn add electron-is-dev`
